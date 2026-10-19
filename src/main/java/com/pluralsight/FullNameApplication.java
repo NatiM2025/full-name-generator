@@ -15,7 +15,23 @@ public class FullNameApplication {
         System.out.print("Suffix: ");
         String suffix = input.nextLine();
 
+        String result = createFullName(firstName,middleName,lastName,suffix);
+        System.out.println(result);
 
+    }
 
+    public static String createFullName (String firstName,String middleName, String lastName, String suffix){
+        String fullName = "";
+        if (!firstName.isBlank()){
+            fullName += firstName + " ";
+        }if (!middleName.isBlank()) {
+            fullName += middleName + " ";
+        }if (!lastName.isBlank()){
+            fullName += lastName;
+        }if (!suffix.isBlank()) {
+            fullName += "," + suffix;
+        }
+        System.out.println(fullName);
+        return fullName;
     }
 }
