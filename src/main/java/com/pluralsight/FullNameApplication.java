@@ -18,6 +18,7 @@ public class FullNameApplication {
         String result = createFullName(firstName,middleName,lastName,suffix);
         System.out.println(result);
 
+        input.close();
     }
 
     public static String createFullName (String firstName,String middleName, String lastName, String suffix){
